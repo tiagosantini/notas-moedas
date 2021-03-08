@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int * getQuantNotas(float n, int *quantidade) {
+int * get_quantidade_notas(float n, int *quantidade) {
     float nota[] = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00};
 
     int i = 0;
@@ -24,7 +24,7 @@ int * getQuantNotas(float n, int *quantidade) {
     return quantidade;
 }
 
-int * getQuantMoedas(float n, int *quantidade) {
+int * get_quantidade_moedas(float n, int *quantidade) {
     int moeda[] = {1, 50, 25, 10, 5, 1};
 
     int notas = n;
@@ -69,8 +69,8 @@ int main() {
 
     scanf("%f", &n);
 
-    int * notas = getQuantNotas(n, quant_nota);
-    int * moedas = getQuantMoedas(n, quant_moeda);
+    int * notas = get_quantidade_notas(n, quant_nota);
+    int * moedas = get_quatidade_moedas(n, quant_moeda);
 
     printf("NOTAS:\n");
     printf("%d nota(s) de R$ 100.00\n", notas[0]);
